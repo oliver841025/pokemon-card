@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import classes from './Post.module.scss';
 
 const myLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality}`;
@@ -7,15 +8,15 @@ const myLoader = ({ src, width, quality }) => {
 const Post = (props) => {
   const { cardData } = props;
   return (
-    <div>
+    <div className={classes.wrapper}>
       <Image
         loader={myLoader}
         src={cardData.card_images[0].image_url}
         alt={cardData.name}
-        width={500}
-        height={650}
+        width={300}
+        height={400}
       />
-      <p>{cardData.desc}</p>
+      <p className={classes.desc}>{cardData.desc}</p>
     </div>
   );
 };
