@@ -1,0 +1,13 @@
+.wrapper {
+  // border: 1px solid red;
+  list-style: none;
+  width: 94vw;
+
+  li {
+    // border: 1px solid green;
+    display: inline-block;
+    margin: 8px;
+    // word-wrap: break-word;
+    // word-break: break-all;
+  }
+}
