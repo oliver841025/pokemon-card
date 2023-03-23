@@ -10,7 +10,7 @@ export default function Home(props) {
 
 export async function getStaticProps() {
   const res = await fetch(
-    'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0'
+    'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0'
   );
   const posts = await res.json();
 
