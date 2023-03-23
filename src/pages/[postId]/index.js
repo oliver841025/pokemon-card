@@ -1,13 +1,13 @@
-import Posts from '@/components/posts/Posts';
+import Post from '@/components/post/Post';
 
-const Post = (props) => {
+const PostIndex = (props) => {
   const { post } = props;
   const cardData = post.data[0];
-  //   console.log(cardData);
+  console.log(cardData);
 
   return (
     <>
-      <Posts cardData={cardData} />
+      <Post cardData={cardData} />
     </>
   );
 };
@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const res = await fetch(
-    'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0'
+    'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0'
   );
   const posts = await res.json();
 
@@ -43,4 +43,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default Post;
+export default PostIndex;

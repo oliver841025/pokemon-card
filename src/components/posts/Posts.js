@@ -8,7 +8,7 @@ const myLoader = ({ src, width, quality }) => {
 
 const Posts = (props) => {
   const { posts } = props;
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <>
