@@ -26,9 +26,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(
-    'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=100&offset=0'
-  );
+  const res = await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php');
   const posts = await res.json();
 
   const paths = posts.data.map((post) => ({

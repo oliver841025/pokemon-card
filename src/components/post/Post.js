@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useState } from 'react';
 import classes from './Post.module.scss';
 
 const myLoader = ({ src, width, quality }) => {
@@ -7,6 +8,7 @@ const myLoader = ({ src, width, quality }) => {
 
 const Post = (props) => {
   const { cardData } = props;
+
   return (
     <div className={classes.wrapper}>
       <Image
